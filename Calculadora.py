@@ -1,5 +1,5 @@
 while True:
-    print("Isso é uma calculadora, insira os dados selecionados!")
+    print("Isso é uma calculadora, insira os dados solicitados!")
     a = input('Insira um numero: ')
     b = input('Insira um Operador válido(+-*/): ')
     c = input('Insira um numero: ')
@@ -15,16 +15,16 @@ while True:
 
     if d is True:
         if b == '+':
-            print(f'O resultado de {a} {b} {c} é: ', (a+c))
+            print(f'O resultado de {a} {b} {c} é:', (a+c))
 
         elif b == '-':
-            print(f'O resultado de {a} {b} {c} é: ', (a-c))
+            print(f'O resultado de {a} {b} {c} é:', (a-c))
 
         elif b == '*':
-            print(f'O resultado de {a} {b} {c} é: ', (a*c))
+            print(f'O resultado de {a} {b} {c} é:', (a*c))
 
         elif b == '/':
-            print(f'O resultado de {a} {b} {c} é: ', (a/c))
+            print(f'O resultado de {a} {b} {c} é:', (a/c))
         else:
             print('Foi inserido um operador invalido') 
             continue
