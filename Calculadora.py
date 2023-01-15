@@ -1,35 +1,37 @@
+print("Isso é uma calculadora, insira os dados solicitados!")
 while True:
-    print("Isso é uma calculadora, insira os dados solicitados!")
-    a = input('Insira um numero: ')
-    b = input('Insira um Operador válido(+-*/): ')
-    c = input('Insira um numero: ')
-    d = None
+    number1 = input('Insira um numero: ')
+    operator = input('Insira um Operador válido(+-*/): ')
+    number2 = input('Insira um numero: ')
+    validadornmb = None
     try:
-        a = float(a)
-        c = float(c)
-        d = True
+        number1 = float(number1)
+        number2 = float(number2)
+        validadornbm = True
     except:
-        d = None
-        print('Foi inserido um número invalido!')
+        validadornbm = None
+        print('Foi inserido um número invalido! Tente novamente')
         continue
 
-    if d is True:
-        if b == '+':
-            print(f'O resultado de {a} {b} {c} é:', (a+c))
+    if operator not in '+-*/':
+        print('Foi inserido um operador invalido! Tente novamente')
+        continue
 
-        elif b == '-':
-            print(f'O resultado de {a} {b} {c} é:', (a-c))
+    elif operator == '+':
+        print(f'O resultado de {number1} {operator} {number2} é: {number1 + number2:,.2f}')
 
-        elif b == '*':
-            print(f'O resultado de {a} {b} {c} é:', (a*c))
+    elif operator == '-':
+        print(f'O resultado de {number1} {operator} {number2} é: {number1 - number2:,.2f}')
 
-        elif b == '/':
-            print(f'O resultado de {a} {b} {c} é:', (a/c))
-        else:
-            print('Foi inserido um operador invalido') 
-            continue
+    elif operator == '*':
+        print(f'O resultado de {number1} {operator} {number2} é: {number1 * number2:,.2f}')
 
-    sair = input('Deseja [s]air?').lower().startswith('s')
+    elif operator == '/':
+        print(f'O resultado de {number1} {operator} {number2} é: {number1 / number2:,.2f}')
+
+    sair = input('Deseja sair? Se sim digite [s]').lower().startswith('s')
     if sair:
+        print('Calculadora encerrada!')
         break
+    
 
